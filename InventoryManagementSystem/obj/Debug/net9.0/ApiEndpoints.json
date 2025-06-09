@@ -1,0 +1,46 @@
+[
+  {
+    "ContainingType": "InventoryManagementSystem.Application.Request.Maintenance.GetMaintenanceHandler",
+    "Method": "HandleAsync",
+    "RelativePath": "api/maintenance/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Maintenance Api"
+    ]
+  },
+  {
+    "ContainingType": "InventoryManagementSystem.Application.Request.Maintenance.CreateMaintenanceHandler",
+    "Method": "HandleAsync",
+    "RelativePath": "api/maintenance/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "InventoryManagementSystem.Entities.CreateMaintenance",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Maintenance Api"
+    ]
+  }
+]
