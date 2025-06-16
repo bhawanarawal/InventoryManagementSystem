@@ -5,18 +5,14 @@ using System;
 
 namespace InventoryManagementSystem.Application.Request.Maintenance;
 
-public static class CreateMaintenanceHandler
+public static class UpdateMaintenanceHandler
 {
     public static async Task<IResult> HandleAsync(MaintenanceRequest request, ApplicationDbContext db, CancellationToken cancellationToken = default)
     {
-        db.Add(request);
+        db.Update(request);
         await db.SaveChangesAsync();
 
         
-        return Results.Created($"/maintenance/{request.Id}", new
-        {
-            Message = "Maintenance created successfully",
-            Data = request
-        });
+        return Results.NoContent();
     }
 }

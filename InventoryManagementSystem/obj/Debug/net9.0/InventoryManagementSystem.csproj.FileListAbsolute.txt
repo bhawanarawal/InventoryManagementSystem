@@ -20,7 +20,6 @@ D:\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\staticwe
 D:\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\staticwebassets.build.json.cache
 D:\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\staticwebassets.development.json
 D:\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-D:\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\Inventor.EBF2E7CF.Up2Date
 D:\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\InventoryManagementSystem.dll
 D:\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\refint\InventoryManagementSystem.dll
@@ -157,3 +156,4 @@ D:\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0\runtimes
 D:\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 D:\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

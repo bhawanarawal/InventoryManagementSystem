@@ -28,7 +28,57 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "InventoryManagementSystem.Entities.CreateMaintenance",
+        "Type": "InventoryManagementSystem.Entities.MaintenanceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Maintenance Api"
+    ]
+  },
+  {
+    "ContainingType": "InventoryManagementSystem.Application.Request.Maintenance.UpdateMaintenanceHandler",
+    "Method": "HandleAsync",
+    "RelativePath": "api/maintenance/",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "InventoryManagementSystem.Entities.MaintenanceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Maintenance Api"
+    ]
+  },
+  {
+    "ContainingType": "InventoryManagementSystem.EndPoints.ApiEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapMaintenanceEndpoints\u003Eb__1_0",
+    "RelativePath": "api/maintenance/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
