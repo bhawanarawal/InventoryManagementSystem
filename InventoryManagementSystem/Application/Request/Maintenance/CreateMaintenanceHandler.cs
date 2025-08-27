@@ -1,22 +1,24 @@
-﻿using InventoryManagementSystem.Application.DataContext;
-using InventoryManagementSystem.Entities;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using InventoryManagementSystem.Entities;
+using InventoryManagementSystem.Services;
 
 namespace InventoryManagementSystem.Application.Request.Maintenance;
 
 public static class CreateMaintenanceHandler
 {
-    public static async Task<IResult> HandleAsync(MaintenanceRequest request, ApplicationDbContext db, CancellationToken cancellationToken = default)
+    public static async Task<IResult> HandleAsync(MaintenanceRequest request, IDatabaseService databaseService, CancellationToken cancellationToken = default)
     {
-        db.Add(request);
-        await db.SaveChangesAsync();
+        var query = "INSERT INTO Maintenance (Description, Status, CreatedAt, UpdatedAt) " +
+            "VALUES (@Description, @Status, GETUTCDATE(), GETUTCDATE());SELECT CAST(SCOPE_IDENTITY() as int);";
 
-        
-        return Results.Created($"/maintenance/{request.Id}", new
+        var parameters = new
         {
-            Message = "Maintenance created successfully",
-            Data = request
-        });
+            request.Description,
+            Status = (int)request.Status // store enum as int
+        };
+
+        var newId = await databaseService.ExecuteScalarAsync<int>(query, parameters, cancellationToken);
+
+        return Results.Created($"/maintenance/{newId}", new { Message = "Maintenance created", Id = newId });
     }
 }
+

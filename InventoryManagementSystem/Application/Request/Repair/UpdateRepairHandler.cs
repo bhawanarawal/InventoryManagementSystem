@@ -1,10 +1,10 @@
 ﻿using InventoryManagementSystem.Dtos;
 using InventoryManagementSystem.Services;
-public static class UpdateMaintenaceHandler
+public static class UpdateRepairHandler
 {
-    public static async Task<IResult> HandleAsync(int id, MaintenanceDto request, IDatabaseService databaseService, CancellationToken cancellationToken = default)
+    public static async Task<IResult> HandleAsync(int id, RepairDto request, IDatabaseService databaseService, CancellationToken cancellationToken = default)
     {
-        var query = "UPDATE maintenance SET Description = @Description, Status = @Status, UpdatedAt = GETUTCDATE() WHERE Id = @Id";
+        var query = "UPDATE Repair SET Description = @Description, Status = @Status, UpdatedAt = GETUTCDATE() WHERE Id = @Id";
 
         var parameters = new
         {
@@ -18,6 +18,6 @@ public static class UpdateMaintenaceHandler
         if (rowsAffected == 0)
             return Results.NotFound(new { Message = $"No repair found with ID = {id}" });
 
-        return Results.Ok(new { Message = "maintenance updated successfully" });
+        return Results.Ok(new { Message = "Repair updated successfully" });
     }
 }

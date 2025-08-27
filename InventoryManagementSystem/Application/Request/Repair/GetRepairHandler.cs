@@ -2,14 +2,14 @@
 using InventoryManagementSystem.Services;
 
 
-namespace InventoryManagementSystem.Application.Request.Maintenance;
+namespace InventoryManagementSystem.Application.Request.Repair;
 
-public static class GetMaintenanceHandler
+public static class GetRepairHandler
 {
     public static async Task<IResult> HandleAsync(IDatabaseService databaseService, CancellationToken cancellationToken = default)
     {
-        var query = "SELECT * from maintenance";
-        var result = await databaseService.GetAllQueryAsync<MaintenanceDto>(cancellationToken: cancellationToken, query:query);
+        var query = "SELECT * from Repair";
+        var result = await databaseService.GetAllQueryAsync<RepairDto>(cancellationToken: cancellationToken, query:query);
 
 
         return Results.Ok(result);
@@ -34,14 +34,14 @@ public static class GetMaintenanceHandler
 
     public static async Task<IResult> HandleByIdAsync(int id, IDatabaseService databaseService, CancellationToken cancellationToken = default)
     {
-        var query = "SELECT * FROM maintenance WHERE Id = @Id";
+        var query = "SELECT * FROM Repair WHERE Id = @Id";
         var parameters = new { Id = id };
 
-        var result = await databaseService.GetQueryAsync<MaintenanceDto>(query, parameters, cancellationToken: cancellationToken);
+        var result = await databaseService.GetQueryAsync<RepairDto>(query, parameters, cancellationToken: cancellationToken);
 
         if (result == null)
         {
-            return Results.NotFound(new { Message = "Maintenance request not found" });
+            return Results.NotFound(new { Message = "Repair request not found" });
         }
 
         return Results.Ok(result);
