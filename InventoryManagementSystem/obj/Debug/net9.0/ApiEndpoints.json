@@ -44,31 +44,6 @@
     ]
   },
   {
-    "ContainingType": "InventoryManagementSystem.Application.Request.Maintenance.UpdateMaintenanceHandler",
-    "Method": "HandleAsync",
-    "RelativePath": "api/maintenance/",
-    "HttpMethod": "PUT",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "InventoryManagementSystem.Entities.MaintenanceRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ],
-    "Tags": [
-      "Maintenance Api"
-    ]
-  },
-  {
     "ContainingType": "InventoryManagementSystem.EndPoints.ApiEndPoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapMaintenanceEndpoints\u003Eb__1_0",
     "RelativePath": "api/maintenance/{id:int}",
@@ -91,6 +66,207 @@
     ],
     "Tags": [
       "Maintenance Api"
+    ]
+  },
+  {
+    "ContainingType": "InventoryManagementSystem.EndPoints.ApiEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapMaintenanceEndpoints\u003Eb__1_1",
+    "RelativePath": "api/maintenance/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "InventoryManagementSystem.Dtos.MaintenanceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Maintenance Api"
+    ]
+  },
+  {
+    "ContainingType": "InventoryManagementSystem.EndPoints.ApiEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapMaintenanceEndpoints\u003Eb__1_2",
+    "RelativePath": "api/maintenance/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Maintenance Api"
+    ]
+  },
+  {
+    "ContainingType": "InventoryManagementSystem.Application.Request.Repair.GetRepairHandler",
+    "Method": "HandleAsync",
+    "RelativePath": "api/repair/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Repair API"
+    ]
+  },
+  {
+    "ContainingType": "InventoryManagementSystem.Application.Request.Repair.CreateRepairHandler",
+    "Method": "HandleAsync",
+    "RelativePath": "api/repair/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "InventoryManagementSystem.Entities.RepairRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Repair API"
+    ]
+  },
+  {
+    "ContainingType": "InventoryManagementSystem.EndPoints.ApiEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapRepairEndpoints\u003Eb__2_0",
+    "RelativePath": "api/repair/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Repair API"
+    ]
+  },
+  {
+    "ContainingType": "InventoryManagementSystem.EndPoints.ApiEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapRepairEndpoints\u003Eb__2_1",
+    "RelativePath": "api/repair/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "InventoryManagementSystem.Dtos.RepairDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Repair API"
+    ]
+  },
+  {
+    "ContainingType": "InventoryManagementSystem.EndPoints.ApiEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapRepairEndpoints\u003Eb__2_2",
+    "RelativePath": "api/repair/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Repair API"
+    ]
+  },
+  {
+    "ContainingType": "InventoryManagementSystem.EndPoints.ApiEndPoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAuthEndpoints\u003Eb__3_0",
+    "RelativePath": "login",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "Microsoft.AspNetCore.Identity.Data.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
     ]
   }
 ]

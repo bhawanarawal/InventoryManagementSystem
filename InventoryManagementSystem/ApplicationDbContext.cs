@@ -6,7 +6,9 @@ namespace InventoryManagementSystem.Application.DataContext;
 
 public class ApplicationDbContext : DbContext
 {
-    public DbSet<MaintenanceRequest> Maintenance { get; set; } 
+    public DbSet<MaintenanceRequest> Maintenance { get; set; }
+    public DbSet<RepairRequest> Repair { get; set; }
+
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {
